@@ -13,3 +13,8 @@ h1{
     margin: auto;
     width: 100%;
 }
+
+.center img{
+	display:block;
+	margin:auto;
+}
