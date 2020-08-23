@@ -50,7 +50,7 @@
     color: rgb(var(--primary));
 }
 
-.conn-menu button.active {
+.con-menu button.active {
     background: #fff;
     box-shadow: 0px 5px 25px 0px rgba(0,0,0,.06);
     color: rgb(var(--primary));
