@@ -1,0 +1,6 @@
+TODO LIST:
+
+- Check body and html positioning [URGENT]
+- Project section
+- Responsive
+- Remove .html extension from url

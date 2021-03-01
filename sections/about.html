@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="./about-style.css">
+    
+    <title>daniele.mastracco - About</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <span class="logo">
+                <a href="/">DM</a>
+            </span>
+            <button aria-expanded="false" aria-controls="menu-list">
+                <span class="open">☰</span>
+                <span class="close">×</span>
+            </button>
+            <ul id="menu-list">
+                <li><a class="" href="/projects.html">Projects</a></li>
+                <li><a class="" href="/uses.html">Uses</a></li>
+                <li><a class="active" href="/about.html">About</a></li>
+            </ul>
+           <!--  <nav class="menu">
+                
+            </nav> -->
+        </nav>
+        <div class="cards">
+
+        </div>
+
+        <div class="footer">
+            <p class="copyright">Copyright ©2020 Daniele Mastracco. All rights reserved.</p>
+        </div>
+
+    </div>  
+
+    <script>
+        const navButton = document.querySelector('button[aria-expanded]');
+
+        function toggleNav({ target }){
+            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+            navButton.setAttribute('aria-expanded', !expanded);
+        }
+
+        navButton.addEventListener('click', toggleNav);
+    </script>
+
+
+</body>
+</html>

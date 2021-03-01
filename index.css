@@ -1,0 +1,152 @@
+:root{
+    
+    /*Colors*/
+    --pure-black: #000000;
+    --pure-white: #ffffff;
+    --dirty-white: #d9d9d9;
+    --more-grey: #222224;
+    --dirty-grey: #3d3731;
+    --lime-green: #00FF00;
+    --some-green: #09aa09;
+    --darksea-green: #8fbc8f;
+}
+
+html {
+    background: var(--pure-black) !important;
+
+}
+
+body {
+    display: grid;
+    background: var(--pure-black);
+    margin: 0;
+    height: 100vh;
+    padding: 0px 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
+    row-gap: 5px;
+    margin: 0px auto;
+    max-height: 100vh; 
+    
+}
+
+.top{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 1fr;
+    color: var(--pure-white);
+
+}
+
+.intro{
+    color: var(--dirty-white);
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900;
+    font-size: 75px;
+    text-align: left;
+    align-self: center;
+    padding: 10px;
+    margin: auto;
+    
+}
+
+.site-link{
+    display: grid;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    /*Disable text selection in different browsers*/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.button{
+    background-color: var(--some-green);
+    border: none;
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--dirty-white);
+    
+}
+
+.button:hover{
+    background: var(--darksea-green);
+    color: var(--pure-black);
+}
+
+.social{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 45px;
+    grid-auto-flow: column;
+    align-content: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+a{
+    color: var(--dirty-white);
+    text-decoration: none;
+}
+
+.footer{
+    display: grid;
+    grid-template-rows: 1fr;
+    position: relative;
+    padding: 10px;
+    bottom: 0;
+}
+
+.copyright{
+    color: var(--dirty-white);
+    text-align: center;
+    margin: auto;
+    font-weight: 550;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+
+}
+
+
+@media (min-width: 643px){
+    body{
+        padding: 0 100px;
+    }
+
+    .container{
+        margin-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 642px){
+
+   .container{
+       margin-top: 50px;
+   }
+
+    .intro{
+        font-size: 60px;
+    }
+
+    .site-link{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .social{
+        margin-bottom: 50px;
+    }
+   
+}
