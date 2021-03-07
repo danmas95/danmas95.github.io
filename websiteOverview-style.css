@@ -22,6 +22,12 @@ body {
     margin: 0;
     min-height: 100vh;
     padding: 0px 20px;
+    /*Disable text selection in different browsers*/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .container{
@@ -38,81 +44,7 @@ body {
     border: 0.5px solid var(--pure-white);
 }
  */
-/* Navigation */
 
-/* .navigation{
-    display: grid;
-    padding: 0;
-    border-bottom: 2px solid var(--dirty-grey);
-} */
-
-
-/* .logo{
-    display: grid;
-    font-family: 'Bebas Neue', sans-serif;
-    color: var(--dirty-white);
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-top: auto;
-}
-
-.logo a{
-    border: 2px solid var(--dirty-white);
-    font-family: 'Bebas Neue', sans-serif;
-    color: var(--dirty-white);
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 700;
-    padding: 5px 10px;
-}
-
-.logo a:hover{
-    background: var(--more-grey);
-}
- */
-/*
-.navigation button{
-    border: none;
-    background: var(--pure-black);
-    color: var(--dirty-white);
-    font-size: 32px;
-    height: 32px;
-    width: 32px;
-    cursor: pointer; 
-    position: relative; 
-    user-select: none;    
-}
-
-
-.navigation ul li a{
-    display: block;
-    background: var(--pure-black);
-    color: var(--pure-black);
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-
-}
-
-
-[aria-controls="menu-list"] {
-    display: none;
-}
-
-.navigation ul li .active {
-    background: var(--more-grey);
-    color: var(--dirty-white);
-}
-
-.navigation ul li a:hover{
-    background: var(--more-grey);
-    color: var(--dirty-white);
-}
- */
 .sections{
     display: grid;
     grid-template-rows: auto auto auto;
@@ -122,7 +54,7 @@ body {
 }
 
 .sections >*{
-    border: 1px solid var(--dirty-grey);
+    border: 2px solid var(--dirty-grey);
 }
 
 .section {
@@ -194,21 +126,7 @@ body {
         width: 100%;
     }
 
-    
-    /* .navigation{
-        display: grid;
-        grid-auto-flow: column;
-        padding: 0px 0px 0px;
-    }
 
-    .navigation ul{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-gap: 10px;
-        padding: 0;
-        list-style: none;
-        
-    } */
 
 }
 
@@ -220,83 +138,5 @@ body {
         width: 100%;
     }
 
-    /* .navigation {
-        display: grid;
-        grid-template-areas: 
-            "logo toggle"
-            "menu menu";
-        padding-top: 20px;
-    }
-
-    
-    [aria-controls="menu-list"]{
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .navigation button{
-        display: grid;
-        margin-left: auto;
-        margin-bottom: auto;
-        margin-top: auto;
-        padding-right: 40px;
-        position: relative;
-        height: 43px;
-        border: none;
-    }
-
-    .navigation ul {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-area: menu;
-        grid-row-gap: 20px;
-        max-height: 0;
-        overflow: hidden;
-        transform: rotateX(90deg);
-        transition: all 0.5s;
-        padding: 0;
-    }
-
-    .navigation ul li{
-        text-align: center;
-        width: 100%;
-        background: var(--pure-black);
-        color: var(--dirty-white);
-        text-align: center;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 20px;
-        font-family: 'Bebas Neue', sans-serif;
-        font-weight: 600;
-        text-decoration: none;
-
-    }
-
-    .navigation ul li a{
-        padding: auto;
-    }
-
-    .navigation ul li a:hover{
-        background: var(--more-grey);
-        color: var(--dirty-white);
-    }
-
-    
-    [aria-expanded="true"] ~ ul {
-        display: grid;
-        max-height: 500px;
-        transform: rotate(0);
-    }
-
-    [aria-expanded="false"] .close{
-          display: none;
-    }
-
-    [aria-expanded="true"] .close{
-        display: inline-block;
-    }
-
-    [aria-expanded="true"] .open{
-        display: none;
-    } */
+ 
 }
