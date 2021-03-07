@@ -5,6 +5,7 @@
     --pure-white: #ffffff;
     --dirty-white: #d9d9d9;
     --more-grey: #222224;
+    --dirty-grey: #3d3731;
 }
 
 html {
@@ -31,6 +32,12 @@ body {
     margin: 0px auto;
     height: 100vh; /*View port height that sets height to 100% */
     max-width: 992px;
+    /*Disable text selection in different browsers*/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 /* .container >* {
@@ -112,6 +119,53 @@ body {
     color: var(--dirty-white);
 }
 
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-template-areas: 
+        "left right";
+}
+
+.wrapper .left{
+    display: grid;
+    grid-area: left;
+    grid-template-rows: 1fr 1fr;
+}
+
+.wrapper .right{
+    display: grid;
+    grid-area: right;
+    grid-template-rows: 1fr 1fr;
+}
+
+.wrapper ul{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dirty-white);
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 2;
+}
+
+.wrapper .left h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--dirty-white);
+    font-family: 'Bebas Neue', sans-serif;
+    border-bottom: 2px solid var(--dirty-grey);
+}
+
+
+.wrapper .right h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--dirty-white);
+    font-family: 'Bebas Neue', sans-serif;
+    border-bottom: 2px solid var(--dirty-grey);
+}
+
+
 .footer{
     display: grid;
     grid-template-rows: 1fr;
@@ -190,7 +244,9 @@ body {
         margin-top: auto;
         padding-right: 40px;
         position: relative;
-        height: 43px;
+        height: 43px;  
+        border: none;
+        outline: none;  
     }
 
     .navigation ul {
@@ -247,4 +303,19 @@ body {
     [aria-expanded="true"] .open{
         display: none;
     }
+}
+
+@media(max-width: 680px){
+
+    .wrapper{
+        display: grid;
+        grid-template-areas: 
+            "left left"
+            "right right";
+    }
+
+    .footer{
+        margin-top: 100px;
+    }
+
 }
