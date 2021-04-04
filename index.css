@@ -39,14 +39,14 @@ body {
     
 }
 
-.top{
+/* .top{
     display: grid;
     grid-gap: 20px;
     grid-template-rows: 1fr;
     color: var(--pure-white);
 
 }
-
+ */
 .intro{
     color: var(--dirty-white);
     font-family: 'Bebas Neue', sans-serif;
@@ -72,6 +72,7 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
+
 
 .button{
     background-color: var(--some-green);
@@ -130,7 +131,40 @@ a{
     }
 
     .container{
-        margin-top: 10px;
+        /* margin-top: 10px; */
+        margin-top: 0px;
+    }
+
+    .site-link{
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-top: 10px;
+    }
+
+    .social{
+        /* margin-bottom: 50px; */
+        margin-top: 50px;
+    }
+
+    .fa-instagram:hover{
+        color: #c13584;
+     }
+ 
+     .fa-twitter:hover{
+         color: #176bca;
+     }
+ 
+     .fa-github:hover{
+         color: #9030c7;
+     }
+ 
+     .fa-link:hover{
+         color: #4e5561;
+     }
+
+    .footer{
+        bottom: 0px;
+        margin-top: 100px;
     }
 
 }
@@ -149,10 +183,208 @@ a{
     .site-link{
         margin-top: auto;
         margin-bottom: auto;
+        padding-top: 50px;
     }
 
+
     .social{
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
+        margin: 50px 0px 0px 0px;
+    }
+
+    .fa-instagram:hover{
+        color: #c13584;
+     }
+ 
+     .fa-twitter:hover{
+         color: #176bca;
+     }
+ 
+     .fa-github:hover{
+         color: #9030c7;
+     }
+ 
+     .fa-link:hover{
+         color: #4e5561;
+     }
+
+    .footer{
+       bottom: 0px;
+       margin-top: 100px;
+       padding-bottom: 5px;
     }
    
 }
+
+
+@media (max-width: 1449px){
+    .site-link .btn-projects, .btn-uses, .btn-about{
+        display: none;
+    }
+}
+
+@media (min-width: 1450px){
+    
+    body{
+        padding: 0 50px;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-rows: 1fr auto;
+        row-gap: 5px;
+        margin: 0px 250px;
+        max-height: 100vh; 
+        
+    }
+
+    .content{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        grid-template-areas: 
+            "text links"
+            "social social"
+            "footer footer";
+    }
+
+    .content h1{
+        padding-top: 70px;
+    }
+
+
+    .intro{
+        grid-area: text;
+    }
+
+    .site-link{
+        display: grid;
+        grid-area: links;
+        grid-row-gap: 20px;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .site-link .button{
+        display: none;
+    }
+
+
+    .site-link .btn-projects, .btn-uses, .btn-about{
+        background-color: var(--some-green);
+        border: none;
+        width: 300px;
+        font-weight: 700;
+        font-size: 30px;
+        border-radius: 15px;
+        text-align: center;
+        color: var(--dirty-white);
+    }
+
+    .site-link .btn-projects:hover, .btn-uses:hover, .btn-about:hover{
+        background: var(--darksea-green);
+        color: var(--pure-black);
+    }
+
+
+    .social{
+        grid-area: social;
+        padding-bottom: 0px;
+        padding-top: 50px;
+        margin-top: 0;
+        justify-items: center;
+    }
+
+    .social a{
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .fa-instagram:hover{
+       color: #c13584;
+    }
+
+    .fa-twitter:hover{
+        color: #176bca;
+    }
+
+    .fa-github:hover{
+        color: #9030c7;
+    }
+
+    .fa-link:hover{
+        color: #4e5561;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+}
+
+@media (min-width: 1690px){
+    
+    body{
+        padding: 0 50px;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-rows: 1fr auto;
+        row-gap: 5px;
+        margin: 0px 250px;
+        max-height: 100vh; 
+        
+    }
+
+    .content{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        grid-template-areas: 
+            "text links"
+            "social social"
+            "footer footer";
+    }
+
+    .content h1{
+        padding-top: 70px;
+    }
+
+
+    .intro{
+        grid-area: text;
+    }
+
+    .site-link{
+        display: grid;
+        grid-area: links;
+        grid-row-gap: 20px;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .site-link .button{
+        display: none;
+    }
+
+    .site-link .btn-projects, .btn-uses, .btn-about{
+        background-color: var(--some-green);
+        border: none;
+        width: 450px;
+        font-weight: 700;
+        font-size: 30px;
+        border-radius: 15px;
+        text-align: center;
+        color: var(--dirty-white);
+    }
+
+
+    .social{
+        grid-area: social;
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+}
+
